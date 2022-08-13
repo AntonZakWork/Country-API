@@ -1,0 +1,49 @@
+@use '../../../Scss/variables' as v;
+@use '../../../Scss/mixins' as m;
+.contentFiltersContainer{
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width:374px){
+        flex-direction: column;
+        min-height: 80px;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .inputContainer{
+        min-width: 200px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: v.$darkBlue;
+        width: 30%;
+        height: max(100%, 30px);
+        display: flex;
+        gap: 5%;
+        align-items: center;
+        border-radius: 5px;
+        svg{
+            margin-left: 5%;
+            height: 50%;
+            min-width: 20px;
+            fill: v.$white;
+        }
+        input {
+            background-color: inherit;
+            min-width: 155px;
+            width: 90%;
+            height: max(92%, 28px);
+            border-radius: 5px;
+            font-size: 0.75rem;
+         
+        }
+        &.light {
+            @include m.lightThemeWhite;
+            color: black !important;
+            svg {
+                fill: v.$veryDarkBlue;
+            }
+          
+        }
+    }
+   
+}

@@ -1,0 +1,24 @@
+@use '../../../../Scss/variables' as v;
+@use '../../../../Scss/mixins' as m;
+.dropDownPopup{
+    width: 100%;
+    position: absolute;
+    background-color: red;
+    top: 50px;
+    border-radius: 5px;
+    background-color: v.$darkBlue;
+    ul {
+        list-style: none;
+        padding-inline-start: 20px;
+        li {
+            padding: 5px;
+            &:hover {
+                transform: scale(1.05)
+            }
+           
+        }
+    }
+    &.light {
+        @include m.lightTheme;
+    }
+}

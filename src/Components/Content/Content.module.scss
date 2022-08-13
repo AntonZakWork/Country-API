@@ -1,0 +1,6 @@
+.contentContainer {
+    padding: 3vh 5vw;
+    @media (max-width: 530px) {
+        padding: 3vh 30px;
+      }
+}

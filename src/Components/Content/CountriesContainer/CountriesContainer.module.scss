@@ -1,0 +1,13 @@
+@use '../../../Scss/variables' as v;
+
+.countriesContainer {
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    cursor: pointer;
+}
+
+.skeletonContainer{
+    height: 300px;
+}

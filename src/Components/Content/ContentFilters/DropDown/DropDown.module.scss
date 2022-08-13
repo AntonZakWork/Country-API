@@ -1,0 +1,32 @@
+@use '../../../../Scss/variables' as v;
+@use '../../../../Scss/mixins' as m;
+.dropdown {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: v.$darkBlue;
+    width: 20%;
+    padding: 0 5px;
+    min-width: 100px;
+    height: max(100%, 30px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    position: relative;
+    margin-left: 5px;
+    cursor: pointer;
+    @media (max-width:374px){
+        height: 40%;
+        margin: 0;
+    }
+    svg{
+        width: 10%;
+        filter: invert(100%) sepia(99%) saturate(17%) hue-rotate(235deg) brightness(104%) contrast(100%);
+    }
+    &.light {
+        @include m.lightThemeWhite;
+        svg {
+            filter: none;
+        }
+    }
+}

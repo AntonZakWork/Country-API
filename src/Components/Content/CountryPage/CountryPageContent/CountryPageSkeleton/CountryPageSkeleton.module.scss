@@ -1,0 +1,53 @@
+.countryInfoContainer {
+    padding-top: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5vw;
+  
+    @media (max-width: 650px){
+        padding-top: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.6fr;
+        gap: 0;
+    }
+}
+.flagSkeleton{
+    span{
+        display: inline-block;
+        width: 100%;
+        aspect-ratio: 1.7/1;
+        @media (max-width: 650px){
+        margin-top: 10px;
+    }
+    } 
+}
+.name {
+    margin-bottom: 3vh;
+    span{
+        height: 100%;
+    }
+}
+.regularInfo{
+    min-height: 225px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   
+    div{
+        margin-right: 2vw;
+        margin-bottom: 1vh;
+    }
+    
+}
+.infoContainer{
+    margin-top: 35px;
+    align-self: baseline;
+    span{
+        display: inline-block;
+        width: 50%;
+        min-width: 150px;
+        height: 75%;
+        
+    }
+}

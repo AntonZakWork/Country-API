@@ -1,0 +1,41 @@
+.countryInfoContainer {
+    padding-top: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5vw;
+    img {
+        margin:auto;
+        min-width: 250px;
+        min-height: 150px;
+        width: 90%;
+    }
+    @media (max-width: 650px){
+        padding-top: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.5fr;
+        gap: 20px;
+        img{
+            margin:10px 0 0;
+        }
+    }
+}
+.name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 3vh;
+}
+.regularInfo{
+    font-size: 0.9rem;
+    min-height: 225px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    div{
+        margin-right: 2vw;
+        margin-bottom: 1vh;
+    }
+}
+.infoContainer{
+    align-self: baseline;
+}

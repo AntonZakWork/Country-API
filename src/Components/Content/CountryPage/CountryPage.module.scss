@@ -1,0 +1,15 @@
+@use '../../../Scss/mixins' as m;
+@use '../../../Scss/variables' as v;
+.countryContainer{
+    padding: 3vh 5vw;
+    button {
+        @include m.button
+    }
+    &.light {
+        button {
+            @include m.button;
+            background-color: v.$lightGrey;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    }
+}

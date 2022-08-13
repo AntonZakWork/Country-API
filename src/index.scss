@@ -1,0 +1,44 @@
+@use './Scss/variables' as v;
+@use './Scss//mixins' as m;
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body, html, #root {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    color: v.$white;
+}
+input, textarea {
+    outline: none;
+    border:none; 
+    color: v.$white;
+}
+*::placeholder{
+    color: inherit;
+}
+svg:hover{
+    cursor:pointer;
+    
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.light{
+    background-color: v.$lightGrey; 
+    @include m.lightTheme;
+    input, textarea {
+       
+        color: v.$veryDarkBlue;
+    }
+  }
