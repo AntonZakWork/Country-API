@@ -11,14 +11,15 @@ const CountriesContainer = () => {
    const {data, isFetching, error} = searchInput 
    ? countriesAPI.useFetchByNameQuery(searchInput)
    : countriesAPI.useFetchCountriesQuery(currentRegion || 'all')
-  return (
-    <div className = {styles.countriesContainer}>
-        {isFetching  && <CountrySkeleton/>}
+  return <>
+    {isFetching ? <CountrySkeleton/> : <div className = {styles.countriesContainer}>
+        {/* {isFetching  && <CountrySkeleton/>} */}
         {error && ('status' in error) 
         ? <div>Error: {`${error.status}`} </div> 
         : !isFetching && Array.isArray(data) && data.map(country => <CountryCard key = {country.name.common} {...country}/>) }
-    </div>
-  )
+    </div>}
+    </>
+  
 }
 
 export default CountriesContainer

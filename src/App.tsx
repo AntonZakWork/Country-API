@@ -11,7 +11,7 @@ const App = () => {
     const {theme} = useAppSelector(state => state.country)
     localStorage.setItem('theme', theme)
   return (
-    <div className={theme === 'dark' ? styles.app : styles.app + ' light'} >
+    <div data-testid = 'app' className={theme === 'dark' ? styles.app : styles.app + ' light'} >
         <Header/>
         <Routes>
             <Route path = '/' element = {<Content/>}/>

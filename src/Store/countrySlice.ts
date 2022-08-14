@@ -9,7 +9,7 @@ export interface CountryState {
     searchInput: string,
 }
 
-const initialState: CountryState = {
+export const initialState: CountryState = {
   regions: ['Asia', 'Europe', 'Oceania', 'Africa', 'America'],
   currentRegion: null,
   currentRegionName: null,

@@ -13,10 +13,8 @@ const CountrySkeleton = () => {
     size.current = {width:window.innerWidth, height: window.innerHeight}
 
     const skeletonArray = useMemo(()=>{
-        console.log(size.current)
         const rowAmount = Math.round(size.current!.width/320)
         const colAmount = Math.ceil(size.current!.height/300)
-        console.log(rowAmount, colAmount)
         return Array.from({length: rowAmount*colAmount + 10}, (_, i) => i+1)
        
     },[size.current.width, size.current.height])

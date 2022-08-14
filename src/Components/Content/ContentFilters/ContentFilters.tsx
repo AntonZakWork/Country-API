@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../../Hooks/hooks'
 import { useDebounce } from '../../../Hooks/useDebounce'
 import { useThemeClassName } from '../../../Hooks/useThemeClassName'
@@ -7,10 +7,17 @@ import {ReactComponent as SearchSVG} from '../../../svg/search.svg'
 import styles from './ContentFilters.module.scss'
 import DropDown from './DropDown/DropDown'
 const ContentFilters = () => {
+    const {searchInput} = useAppSelector(state => state.country)
     const dispatch = useAppDispatch()
     const className = useThemeClassName('inputContainer', styles)
     const classNameContainer = useThemeClassName('contentFiltersContainer', styles)
     const [localInput, setLocalInput] = useState('')
+
+    useEffect(()=>{
+        if(searchInput === ''){
+            setLocalInput('')
+        }
+    },[searchInput])
 
     const setLocalInputToState = (localInput:string) => {
         dispatch(setSearchInput(localInput))

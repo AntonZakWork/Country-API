@@ -22,7 +22,7 @@ const DropDownPopup = ({setOpenDropDown}: DropDownPopupProps) => {
     },[])
   return (
     <div className={className}>
-        <ul>
+        <ul data-testid="dropdownPopup">
             {regions.map(region => <li key = {region} onClick = {() => countryClick(region)}>{region}</li>)}
         </ul>
     </div>
